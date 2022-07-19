@@ -17,22 +17,22 @@ public class MenuOpciones {
     Console cons = System.console();
 
     public void login() {
-        System.out.println("************Bienvenidos al Sistema de Ventas*************");
-        System.out.println("****************Valide sus credenciales***************");
-        uTo.usuario = leerT.leer("", "Ingrese su usuario");
-        System.out.println("Ingrese su clave:");
+        System.out.println("************Bienvenidos a compuTACTUS*************");
+        System.out.println("****************INICIO***************");
+        uTo.usuario = leerT.leer("", "usuario");
+        System.out.println("contraseña:");
         char[] clavex = cons.readPassword();
         uTo.clave = String.valueOf(clavex);
         if (new UsuarioDao().login(uTo.getUsuario(), new UsuarioDao().getMD5EncryptedValue(uTo.getClave()))) {
             menuPrincipal();
         } else {
-            System.out.println("Intente Nuevamente!! sus datos no son correctos!");
+            System.out.println("!ERROR¡ IGRESE NUEVAMENTE");
             login();
         }
     }
     
     public void menuPrincipal() {
-        System.out.println("------------------------------------Sistema de Ventas------------------------------");
+        System.out.println("-------------------------------MENU VENTAS & USUARIOS------------------------------");
         int opciones = 7;
         String menu = "";
         menu += "1=Registro de Usuario\n";

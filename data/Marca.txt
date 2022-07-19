@@ -13,3 +13,4 @@ M12	Samsung
 M13	LG
 M14	Antryx
 M15	Msi
+M16	invia
